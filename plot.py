@@ -1,6 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d.art3d import Poly3DCollection, Line3DCollection
+import matplotlib.patches as mpatches
+
 
 def plot_filled_circle(ax, center, radius, plane='xy', color='blue', alpha=0.5):
     """
@@ -136,6 +138,10 @@ ax.set_xlabel('X')
 ax.set_ylabel('Y')
 ax.set_zlabel('Z')
 
+blue_patch = mpatches.Patch(color='lightblue', label='M')
+green_patch = mpatches.Patch(color='lightgreen', label='A')
+red_patch = mpatches.Patch(color='lightcoral', label='S')
+plt.legend(handles=[blue_patch, green_patch, red_patch], loc='upper left', fontsize=12)
 
 plt.savefig('taxonomy.png', dpi=300, bbox_inches='tight')
 ax.view_init(elev=90, azim=0)
