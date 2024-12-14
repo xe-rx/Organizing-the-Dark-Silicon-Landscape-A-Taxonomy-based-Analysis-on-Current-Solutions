@@ -3,11 +3,11 @@ University of Amsterdam
 Bachelor, Computer Science
 By
 Marouan Bellari & Boris Vukajlovic
-
 """
 
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d.art3d import Poly3DCollection
+import matplotlib.patches as mpatches
 
 def plot_box(ax, position, sizes, color, alpha=0.5):
     x, y, z = position
@@ -36,7 +36,6 @@ def plot_box(ax, position, sizes, color, alpha=0.5):
     ax.add_collection3d(Poly3DCollection(faces, color=color, alpha=alpha))
 
 fig = plt.figure(figsize=(12, 12))
-
 
 fig.patch.set_facecolor('#383838')
 
@@ -69,10 +68,19 @@ ax.text(0, 0.65, 0.4, "M ∩ A", color='blue', fontsize=10)
 ax.text(0, -1.4, 0.4, "S ∩ M", color='red', fontsize=10)
 ax.text(0, -0.55, 0.65, "A ∩ S", color='green', fontsize=10)
 
+# Create a legend
+blue_patch = mpatches.Patch(color='lightblue', label='M')
+green_patch = mpatches.Patch(color='lightgreen', label='A')
+red_patch = mpatches.Patch(color='lightcoral', label='S')
+plt.legend(handles=[blue_patch, green_patch, red_patch], loc='upper left', fontsize=12)
+
 ax.set_box_aspect([1, 1, 1])
 
 ax.set_xlabel('X')
 ax.set_ylabel('Y')
 ax.set_zlabel('Z')
+
+ax.view_init(elev=11, azim=-8)
+plt.savefig('taxonomy.png', dpi=300, bbox_inches='tight', facecolor=fig.get_facecolor())
 
 plt.show()
