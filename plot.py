@@ -63,10 +63,14 @@ plot_box(ax, blue_cube[:3], blue_cube[3:], 'lightblue', 0.2)
 plot_box(ax, green_cube[:3], green_cube[3:], 'lightgreen', 0.2)
 plot_box(ax, red_cube[:3], red_cube[3:], 'lightcoral', 0.2)
 
+
+ax.text(0, -1.3, 0.7, "S_0", color='red', fontsize=12, weight='bold')
+ax.text(0, 0.50, 0.8, "A_0", color='green', fontsize=12, weight='bold')
+ax.text(0, -0.6, 0, "M_0", color='blue', fontsize=12, weight='bold')
 ax.text(0, -0.5, 0.4, "M ∩ A ∩ S", color='black', fontsize=12, weight='bold')
-ax.text(0, 0.50, 0.4, "M ∩ A", color='blue', fontsize=12, weight='bold')
-ax.text(0, -1.4, 0.4, "S ∩ M", color='red', fontsize=12, weight='bold')
-ax.text(0, -0.55, 0.65, "A ∩ S", color='green', fontsize=12, weight='bold')
+ax.text(0, 0.50, 0.4, "M ∩ A", color='black', fontsize=12, weight='bold')
+ax.text(0, -1.4, 0.4, "S ∩ M", color='black', fontsize=12, weight='bold')
+ax.text(0, -0.55, 0.65, "A ∩ S", color='black', fontsize=12, weight='bold')
 
 blue_patch = mpatches.Patch(color='lightblue', label='M')
 green_patch = mpatches.Patch(color='lightgreen', label='A')
@@ -79,7 +83,7 @@ ax.set_xlabel('X')
 ax.set_ylabel('Y')
 ax.set_zlabel('Z')
 
-ax.view_init(elev=11, azim=-8)
+ax.view_init(elev=12, azim=-9)
 plt.savefig('taxonomy.png', dpi=300, bbox_inches='tight', facecolor=fig.get_facecolor())
 
 plt.show()
