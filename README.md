@@ -6,6 +6,7 @@ _Boris Vukajlovic and Marouan Bellari_
 _Bachelor of Science, Informatica_  
 **Date:**  
 _December 12, 2024_
+**Case study:**
 🔗 [PDF](tocome.pdf)  
 
 ---
