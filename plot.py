@@ -63,12 +63,11 @@ plot_box(ax, blue_cube[:3], blue_cube[3:], 'lightblue', 0.2)
 plot_box(ax, green_cube[:3], green_cube[3:], 'lightgreen', 0.2)
 plot_box(ax, red_cube[:3], red_cube[3:], 'lightcoral', 0.2)
 
-ax.text(0, -0.5, 0.4, "M ∩ A ∩ S", color='black', fontsize=10)
-ax.text(0, 0.65, 0.4, "M ∩ A", color='blue', fontsize=10)
-ax.text(0, -1.4, 0.4, "S ∩ M", color='red', fontsize=10)
-ax.text(0, -0.55, 0.65, "A ∩ S", color='green', fontsize=10)
+ax.text(0, -0.5, 0.4, "M ∩ A ∩ S", color='black', fontsize=12, weight='bold')
+ax.text(0, 0.50, 0.4, "M ∩ A", color='blue', fontsize=12, weight='bold')
+ax.text(0, -1.4, 0.4, "S ∩ M", color='red', fontsize=12, weight='bold')
+ax.text(0, -0.55, 0.65, "A ∩ S", color='green', fontsize=12, weight='bold')
 
-# Create a legend
 blue_patch = mpatches.Patch(color='lightblue', label='M')
 green_patch = mpatches.Patch(color='lightgreen', label='A')
 red_patch = mpatches.Patch(color='lightcoral', label='S')
