@@ -8,7 +8,7 @@ _Bachelor of Science, Informatica_
 _December 12, 2024_
 
 **Case study:**
-_🔗 [PDF](research.pdf)_  
+_🔗 [Research](research.pdf)_  
 
 ---
 
